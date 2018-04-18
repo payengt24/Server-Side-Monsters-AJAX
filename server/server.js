@@ -1,5 +1,5 @@
 const express = require('express');
-const app= express();
+const app = express();
 const PORT = 5000;
 
 app.use(express.static('server/public'));
@@ -9,11 +9,11 @@ app.get('/', (req, res) => {
     res.send('Hello World')
 });
 
-app.get('/monster', (req,res) =>{
+app.get('/monster', (req, res) => {
     const monster = ['Big Foot', 'Loch Ness Monster', 'Mike', 'Sully']
     res.send(monster);
 })
 
-app.listen(PORT, () =>{
+app.listen(PORT, () => {
     console.log(`Listening on port: ${PORT}`)
 })
